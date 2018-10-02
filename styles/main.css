@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    position: relative;
+    margin: 200px auto;
+    width: 250px;
+    height: 250px;
+    perspective: 500px;
+}
+
+.cube {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d
+}
+
+.side {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: 5px solid #fff;
+    font: normal 70px Arial;
+    text-align: center;
+    line-height: 250px;
+    color: #fff;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: translateZ(125px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(125px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(125px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(125px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(125px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(125px);
+}
